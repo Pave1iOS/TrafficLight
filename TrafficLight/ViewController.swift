@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        changeColorButton.layer.cornerRadius = 10
                 
     }
 
