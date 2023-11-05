@@ -71,9 +71,9 @@
                     </view>
                     <connections>
                         <outlet property="changeColorButton" destination="fC8-Zl-RlR" id="ccY-bn-iGc"/>
-                        <outlet property="greenSignalView" destination="kiV-wG-tJf" id="iDM-aT-EwR"/>
-                        <outlet property="redSignalView" destination="9BJ-Yr-EDW" id="gaJ-JV-4eY"/>
-                        <outlet property="yellowSignalView" destination="1sD-7A-eLO" id="UYl-ym-Cgl"/>
+                        <outletCollection property="signals" destination="9BJ-Yr-EDW" collectionClass="NSMutableArray" id="2aO-Ti-SLa"/>
+                        <outletCollection property="signals" destination="1sD-7A-eLO" collectionClass="NSMutableArray" id="ruZ-vh-g2H"/>
+                        <outletCollection property="signals" destination="kiV-wG-tJf" collectionClass="NSMutableArray" id="gmp-0X-gDQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
