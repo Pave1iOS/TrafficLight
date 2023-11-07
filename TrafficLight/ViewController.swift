@@ -12,11 +12,11 @@ class ViewController: UIViewController {
     @IBOutlet var signals:[UIView]!
     
     var numberOfClicks = 0
-            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         changeColorButton.layer.cornerRadius = 10
-        signals.forEach{ $0.layer.cornerRadius = 50 }
+        signals.forEach{ $0.layer.cornerRadius = $0.bounds.width / 2 }
     }
     
     @IBAction func changeColorsDidTappedButton() {
