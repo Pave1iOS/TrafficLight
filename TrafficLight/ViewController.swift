@@ -11,10 +11,10 @@ final class ViewController: UIViewController {
     @IBOutlet weak var changeColorButton: UIButton!
     @IBOutlet var signals:[UIView]!
     
-    private var numberOfClicks: Int = 0 {
+    private var clickCounting = 0 {
         didSet {
-            if numberOfClicks > signals.count - 1 {
-                numberOfClicks = 0
+            if clickCounting > signals.count - 1 {
+                clickCounting = 0
             }
         }
     }
@@ -29,9 +29,9 @@ final class ViewController: UIViewController {
         changeColorButton.setTitle("NEXT", for: .normal)
         
         signals.forEach{ $0.alpha = 0.3 }
-        signals[numberOfClicks].alpha = 1
+        signals[clickCounting].alpha = 1
         
-        numberOfClicks += 1
+        clickCounting += 1
     }
 }
 
