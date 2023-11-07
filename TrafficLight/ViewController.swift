@@ -21,21 +21,15 @@ class ViewController: UIViewController {
     
     @IBAction func changeColorsDidTappedButton() {
         changeColorButton.setTitle("NEXT", for: .normal)
-        numberOfClicks += 1
-        
+    
         signals.forEach{ $0.alpha = 0.3 }
-        
-        switch numberOfClicks {
-        case 1:
-            signals[0].alpha = 1
-        case 2:
-            signals[1].alpha = 1
-        case 3:
-            signals[2].alpha = 1
+    
+        if numberOfClicks > signals.count - 1 {
             numberOfClicks = 0
-        default:
-            break
         }
+        
+        signals[numberOfClicks].alpha = 1
+        numberOfClicks += 1
     }
 }
 
